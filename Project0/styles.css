@@ -1,0 +1,73 @@
+/*
+    Created By: Norman Breuer
+    Last Updated: 03/24/2022
+    Description: Styles for the basics of HTML, CSS and JavaScript
+*/
+
+:root {
+    --palette-lightest: #8ee4af;
+    --palette-light: #5cdb95;
+    --palette-dark: #379683;
+    --palette-darkest: #05386b;
+    --white: #edf5e1;
+    --black: #09090a;
+}
+
+
+html, body {
+    height: 100%;
+    font: 16px;
+    font-family: 'Play', sans-serif;
+    color: #0000;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("scibg2.png");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#header-container {
+    background-color: grey;
+    background: rgba(204, 204, 204, 0.7);
+    width: 35%;
+    margin: 0 auto;
+    border-radius: 50px;
+}
+
+h1 {
+    font-size: 2vw;
+    color: black;
+    text-align: center;
+    padding: 3rem;
+}
+
+#btn-container {
+    text-align: center;
+    margin: 4rem;
+}
+
+#btn {
+    font-size: 2rem;
+    border-radius: 50px;
+    padding: 1.5rem;
+    border-style: none;
+    background-color: deeppink;
+    font-family: 'Play', sans-serif;
+    color: white;
+    transition: 0.5s;
+    opacity: 0.7;
+}
+
+#btn:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    background-color: #2540A2;
+    cursor: pointer;
+}
+
+
