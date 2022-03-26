@@ -1,85 +1,182 @@
 /*
     Created By: Norman Breuer
-    Last Updated: 03/24/2022
-    Description: Styles for the basics of HTML, CSS and JavaScript
+    Last Updated: 03/26/2022
+    Description: Styles Project0
 */
 
 :root {
-
+    --pink: #ff1493;
+    --blue: #2540A2;
 }
 
 
-html, body {
-    height: 100%;
-    font: 16px;
-    font-family: 'Play', sans-serif;
-    color: #0000;
+html {
     margin: 0;
     padding: 0;
+    height: 100%; 
+    box-sizing: border-box;
 }
 
 body {
     background-image: url("scibg2.png");
-    height: 100%; 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100%; 
+    min-width: 320px;
+    margin: auto;
+    font-family: 'Play', sans-serif;
+    line-height: 1.5;
+    font-size: calc(0.75em + 1vmin);
+    word-wrap: break-word;
 }
 
+/* HEADER */
+
 #header-container {
-    display: flexbox;
+    display: flex;
+    justify-content: center;
+    align-content: center;
     text-align: center;
-    background-color: grey;
-    background: rgba(204, 204, 204, 0.75);
-    width: 35%;
-    margin: 0 auto;
+    background: rgb(37, 64, 162, 0.8);
+    border-color:  var(--pink);
+    border-style: solid;
+    border-width: 0.5rem;
+    min-width: 320px;
+    max-width:fit-content;
+    margin: 1.5rem auto;
     border-radius: 50px;
 }
 
 h1 {
-    font-size: 2vw;
     color: white;
     text-align: center;
-    /* white-space: nowrap; */
-    padding: 3rem;
+    padding: 1rem;
 }
+
+/* PARAGRAPH */
+
+#p-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+    max-width: 50%;
+    min-width: 320px;
+    height: auto;
+    text-align: center;
+}
+
+#p {
+    font-size: 1.75rem;
+    color: white;
+}
+
+/* BUTTON */
 
 #btn-container {
     text-align: center;
-    margin: 4rem;
+    margin: 3rem;
+    -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
 }
 
 #btn {
-    font-size: 1.5vw;
+    font-size: 1.5rem;
     border-radius: 50px;
     padding: 1.5rem;
     border-style: none;
-    background-color: deeppink;
+    background-color: var(--pink);
     font-family: 'Play', sans-serif;
     color: white;
     transition: 0.5s;
-    opacity: 0.8;
 }
 
 #btn:hover {
     transform: scale(1.1);
-    opacity: 1;
-    background-color: #2540A2;
+    background-color: var(--blue);
     cursor: pointer;
 }
 
+/* MAIN CONTENT */
+
+#movie-title {
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+}
+
 .container {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
     border: 5px solid white;
+    width: 50%;
+    margin: 0 auto;
+    color: white;
 }
 
 #movie-img {
     border: 5px solid green;
+    /* margin: 0 2rem; */
+    flex-grow: 1;
 }
 
 #movie-data-one {
     border: 5px solid green;
+    /* margin: 0 2rem; */
+    flex-grow: 1;
 }
 
 #movie-data-two {
     border: 5px solid green;
+    /* margin: 0 2rem; */
+    flex-grow: 1;
+}
+
+/* BLOBS */
+
+#blob-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.blob {
+    display: flex;
+	background: var(--pink);
+	border-radius: 50%;
+	margin: 2rem;
+	height: 1.5rem;
+	width: 1.5rem;
+	/* box-shadow: 0 0 0 0 rgba(0, 0, 0, 1); */
+	transform: scale(1);
+	animation: pulse 2s infinite;
+}
+
+.blue-blob {
+    background: var(--blue);
+}
+
+/* KEYFRAMES */
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(37, 64, 162, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 20px rgba(37, 64, 162, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(37, 64, 162, 0);
+	}
 }
