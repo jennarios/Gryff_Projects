@@ -1,7 +1,7 @@
 /*
     Created By: Norman Breuer
-    Last Updated: 03/26/2022
-    Description: Styles Project0
+    Last Updated: 03/27/2022
+    Description: Styles for Project0
 */
 
 :root {
@@ -18,13 +18,13 @@ html {
 }
 
 body {
-    background-image: url("scibg2.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(37,64,162,1) 30%, rgba(255,20,147,1) 100%); */
+    background-color: black;
     height: 100%; 
+    min-height: 100%;
     min-width: 320px;
-    margin: auto;
+    margin: 0;
     font-family: 'Play', sans-serif;
     line-height: 1.5;
     font-size: calc(0.75em + 1vmin);
@@ -35,10 +35,12 @@ body {
 
 #header-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-content: center;
     text-align: center;
-    background: rgb(37, 64, 162, 0.8);
+    /* background: rgb(37, 64, 162, 0.8); */
+    background: none;
     border-color:  var(--pink);
     border-style: solid;
     border-width: 0.5rem;
@@ -49,9 +51,11 @@ body {
 }
 
 h1 {
+    font-size: 4rem;
     color: white;
     text-align: center;
-    padding: 1rem;
+    margin: 0;
+    padding: 0;
 }
 
 /* PARAGRAPH */
@@ -72,13 +76,18 @@ h1 {
     color: white;
 }
 
+#input {
+    display: block;
+    margin: 0 auto;
+    font-family: 'Play', sans-serif;
+    font-size: 1.2rem;
+}
+
 /* BUTTON */
 
 #btn-container {
     text-align: center;
     margin: 3rem;
-    -webkit-perspective: 1000;
-  -webkit-backface-visibility: hidden;
 }
 
 #btn {
@@ -107,7 +116,7 @@ h1 {
 }
 
 .container {
-    display: none;
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
@@ -118,21 +127,39 @@ h1 {
 }
 
 #movie-img {
-    border: 5px solid green;
     /* margin: 0 2rem; */
     flex-grow: 1;
 }
 
 #movie-data-one {
-    border: 5px solid green;
     /* margin: 0 2rem; */
     flex-grow: 1;
 }
 
 #movie-data-two {
-    border: 5px solid green;
     /* margin: 0 2rem; */
     flex-grow: 1;
+}
+
+ul, li {
+    color: white;
+}
+
+#copyright-container {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    margin-top:400px;
+    width: 100%;
+    background: rgb(255, 20, 147, 0.7);
+}
+
+#copyright {
+    text-align: center;
+    font-size: 0.9rem;
+    color: white;
 }
 
 /* BLOBS */
