@@ -76,11 +76,15 @@ h1 {
     color: white;
 }
 
-#input {
+#search-box {
     display: block;
     margin: 0 auto;
     font-family: 'Play', sans-serif;
     font-size: 1.2rem;
+}
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
 }
 
 /* BUTTON */
@@ -109,8 +113,10 @@ h1 {
 
 /* MAIN CONTENT */
 
-#movie-title {
+#artist-name {
+    display: block;
     margin: 0 auto;
+    font-size: 2rem;
     text-align: center;
     color: white;
 }
@@ -126,17 +132,18 @@ h1 {
     color: white;
 }
 
-#movie-img {
+#artist-img {
+    height: 300px;
+    width: 300px;
+    flex-grow: 1;
+}
+
+#artist-data-one {
     /* margin: 0 2rem; */
     flex-grow: 1;
 }
 
-#movie-data-one {
-    /* margin: 0 2rem; */
-    flex-grow: 1;
-}
-
-#movie-data-two {
+#artist-data-two {
     /* margin: 0 2rem; */
     flex-grow: 1;
 }
@@ -151,7 +158,7 @@ ul, li {
     left: 0;
     right: 0;
     height: auto;
-    margin-top:400px;
+    margin-top:200px;
     width: 100%;
     background: rgb(255, 20, 147, 0.7);
 }

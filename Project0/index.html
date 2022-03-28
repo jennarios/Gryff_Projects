@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta name="keywords" content="movie search, movie, movies" />
-    <meta name="description" content="A movie search engine" />
+     <meta name="keywords" content="music artist search, music artist, music, search" />
+    <meta name="description" content="A music artist search site" />
     <meta name="author" content="Norman Breuer" />
-    <title>Moviez</title>
+    <title>Musicaly</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,7 @@
 <body>
     <section id="section1">
         <div id="header-container">
-            <h1>Moviez</h1>
+            <h1>Musicaly</h1>
         </div>
         <div id="blob-container">
             <div class="blob"></div>
@@ -25,31 +25,27 @@
             <div class="blob blue-blob"></div>
         </div>
         <div id="p-container">
-            <p id="p">Hi! Welcome to Moviez. Search any movie and get info</p>
+            <p id="p">Hi! Welcome to Musicaly. Search any artist and get info on that artist</p>
         </div>
-        <input type="text" id="input">
+        <input type="text" id="search-box">
         <div id="btn-container">
             <button id="btn">Let's Go!</button>
         </div>
     </section>
     <div>
-        <p id="movie-title">Title:</p>
+        <p id="artist-name"></p>
     </div>
     <div class="container">
-        <div id="movie-img">Photo goes here</div>
-        <div id=movie-data-one>
+        <div id="artist-img"></div>
+        <div id=artist-data-one>
             <ul>
-                <li>Year:</li>
+                <li id="albums">Albums:</li>
                 <li>Release date:</li>
                 <li>Runtime:</li>                
-                <li>Directors:</li>
-                <li>IMDB:</li>
-                <li>Box Office:</li>
-                <li>Metascore Rating:</li>
             </ul>
         </div>
-        <div id="movie-data-two">
-            <p id="plot">Plot: </p>
+        <div id="artist-data-two">
+            <p id="playlists"></p>
         </div>
     </div>
     <div id="copyright-container">
