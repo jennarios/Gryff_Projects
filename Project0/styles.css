@@ -13,7 +13,6 @@ html {
     margin: 0;
     padding: 0;
     height: 100%;
-    /* box-sizing: border-box; */
 }
 
 body {
@@ -70,6 +69,7 @@ h1 {
     color: white;
 }
 
+/* SEARCH BOX */
 #search-box {
     display: block;
     margin: 0 auto;
@@ -185,6 +185,7 @@ li {
     color: white;
 }
 
+/* FOOTER */
 footer {
     position: relative;
     margin-top: 50px;
