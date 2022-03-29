@@ -52,6 +52,7 @@ async function callToPokemon(parm){
     } 
     catch (error) {
         console.log(error);
+        console.log(error);
     }
 
 }
@@ -61,7 +62,7 @@ async function callToPokemon(parm){
       Fuction Name : processResponse
  */
 function processResponse(response) {
-    console.log("entered Process Response : " + response);
+    console.log("Entered Process Response : " + response);
     let ablities=[];
     let list = document.getElementById("abli");
     list.innerHTML = "";
