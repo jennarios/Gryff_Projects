@@ -10,7 +10,7 @@
         />
         <meta name="description" content="A music artist search site" />
         <meta name="author" content="Norman Breuer" />
-        <title>Musicaly</title>
+        <title>Artistfy</title>
         <link rel="stylesheet" href="styles.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,9 +20,9 @@
         />
     </head>
     <body>
-        <section id="section1">
+        <section>
             <div id="header-container">
-                <h1>Musicaly</h1>
+                <h1>Artistfy</h1>
             </div>
             <div id="blob-container">
                 <div class="blob"></div>
@@ -32,8 +32,7 @@
             </div>
             <div id="p-container">
                 <p id="p">
-                    Hi! Welcome to Musicaly. Search any artist and get info on
-                    that artist
+                    Hi, welcome to Artistfy! Search for your favorite artists and get information about them!
                 </p>
             </div>
             <input type="text" onfocus="this.value=''" id="search-box" />
@@ -41,20 +40,28 @@
                 <button id="btn">Let's Go!</button>
             </div>
         </section>
-        <div>
-            <p id="artist-name"></p>
-        </div>
-        <div id="artist-img"></div>
-        <div id="info-container">
-            <ul>
-                <li id="albums"></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
-        <div id="bio-container">
-            <p id="bio"></p>
-        </div>
+        <section>
+            <div>
+                <p id="artist-name"></p>
+            </div>
+            <div id="artist-img"></div>
+            <div id="info-container">
+                <a href="" target="_blank" id="link1"></a>
+                <a href="" target="_blank" id="link2"></a>
+                <a href="" target="_blank" id="link3"></a>
+                <a href="" target="_blank" id="link4"></a>
+                <a href="" target="_blank" id="link5"></a>
+                <br>
+                <p id="followers"></p>
+                <p id="listeners"></p>
+                <p id="world-rank"></p>
+                </ul>
+            </div>
+            <div id="bio-container">
+                <p id="bio-title"></p>
+                <p class="bio text-align-left"></p>
+            </div>
+        </section>
         <footer></footer>
         <script src="scripts.js"></script>
     </body>

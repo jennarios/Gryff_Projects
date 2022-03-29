@@ -1,20 +1,19 @@
 /*
     Created By: Norman Breuer
-    Last Updated: 03/27/2022
+    Last Updated: 03/29/2022
     Description: Styles for Project0
 */
 
 :root {
     --pink: #ff1493;
     --blue: #2540a2;
-    --green: #1db954;
 }
 
 html {
     margin: 0;
     padding: 0;
     height: 100%;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 body {
@@ -129,27 +128,53 @@ select:focus {
 
 #artist-img {
     margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
     background-size: contain;
+    min-height: 320px;
+    min-width: 320px;
     height: 400px;
     width: 400px;
-}
-
-#info-container {
-    width: 80%;
-    text-align: center;
-    margin: 0 auto;
-}
-
-#bio-container {
-    background-color: rgb(0, 0, 0, 0.8);
-    width: 80%;
-    text-align: center;
-    margin: 0 auto;
-    padding: 1rem;
     border-radius: 5rem;
 }
 
-#bio {
+a {
+    color: var(--pink);
+    text-decoration: none;
+}
+
+#followers,
+#listeners,
+#world-rank {
+    padding: 0;
+    margin: 0.5rem;
+    color: white;
+    font-size: 1.5rem;
+    line-height: 1rem;
+}
+
+#info-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 2rem;
+}
+
+#bio-title {
+    color: white;
+    font-size: 2rem;
+}
+
+#bio-container {
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+.bio {
     color: white;
     font-size: 1rem;
 }
@@ -176,6 +201,12 @@ footer {
     text-align: center;
     font-size: 0.9rem;
     color: white;
+}
+
+.text-align-left {
+    text-justify: inter-word;
+    text-align: left;
+    margin-left: 1rem;
 }
 
 /* BLOBS */

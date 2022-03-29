@@ -1,7 +1,7 @@
 /*
     Created By: Norman Breuer
-    Last Updated: 03/27/2022
-    Description: Javascript file for project0 - "Musicaly - Music Artist Search"
+    Last Updated: 03/29/2022
+    Description: Javascript file for project0 - "Artistfy - Music Artist Search"
 */
 
 // GLOBAL VARIABLES
@@ -42,8 +42,10 @@ async function getOverview(parsedId) {
     setArtistName(response);
     setArtistBio(response);
     setArtistImage(response);
-    console.log(response, name);
-    // .catch(err => console.error(err));
+    setArtistFollowers(response);
+    setArtistLinks(response);
+    setArtistMonthlyListeners(response);
+    setArtistWorldRank(response);
     return secondJson;
 }
 
@@ -51,32 +53,73 @@ async function getOverview(parsedId) {
 function getArtistId(json) {
     let id = json.artists.items[0].data.uri;
     let parsedId = id.replace("spotify:artist:", "");
-    console.log(id);
-    console.log(id.replace("spotify:artist:", ""));
     return parsedId;
 }
 
-// FUNCTION TO GET ARTIST NAME
-function setArtistName(response) {
+// FUNCTION TO SET ARTIST NAME
+function setArtistName(json) {
     let name = document.querySelector("#artist-name");
-    name.innerHTML = response.data.artist.profile.name;
-    console.log(response);
+    name.innerHTML = json.data.artist.profile.name;
 }
 
-// FUNCTION TO GET ARTIST BIO
-function setArtistBio(res) {
-    let bio = document.querySelector("#bio");
-    bio.innerHTML = res.data.artist.profile.biography.text;
-    console.log(res);
-    return bio;
+// FUNCTION TO SET ARTIST BIO
+function setArtistBio(json) {
+    let bio = document.querySelector(".bio");
+    let bioTitle = document.querySelector("#bio-title");
+    bio.innerHTML = json.data.artist.profile.biography.text;
+    bioTitle.innerHTML = "Bio:";
 }
 
-// FUNCTION TO GET ARTIST IMAGE
+// FUNCTION TO SET ARTIST IMAGE
 function setArtistImage(json) {
     let img = document.querySelector("#artist-img");
     let url = json.data.artist.visuals.avatarImage.sources[0].url;
     img.style.backgroundImage = `url('${url}')`;
     img.style.border = "5px solid var(--pink)";
+}
+
+// FUNCTION TO SET ARTIST LINKS
+function setArtistLinks(json) {
+    let link1 = document.querySelector("#link1");
+    link1.innerHTML = "Spotify";
+    link1.href = json.data.artist.sharingInfo.shareUrl;
+
+    let link2 = document.querySelector("#link2");
+    link2.innerHTML = "Facebook";
+    link2.href = json.data.artist.profile.externalLinks.items[0].url;
+
+    let link3 = document.querySelector("#link3");
+    link3.innerHTML = "Instagram";
+    link3.href = json.data.artist.profile.externalLinks.items[1].url;
+
+    let link4 = document.querySelector("#link4");
+    link4.innerHTML = "Twitter";
+    link4.href = json.data.artist.profile.externalLinks.items[2].url;
+
+    let link5 = document.querySelector("#link5");
+    link5.innerHTML = "Wikipedia";
+    link5.href = json.data.artist.profile.externalLinks.items[3].url;
+}
+
+// FUNCTION TO SET ARTIST SPOTIFY FOLLOWERS
+function setArtistFollowers(json) {
+    let followers = document.querySelector("#followers");
+    followers.innerHTML =
+        "Spotify followers: " + json.data.artist.stats.followers;
+}
+
+// FUNCTION TO SET ARTIST SPOTIFY MONTHLY LISTENERS
+function setArtistMonthlyListeners(json) {
+    let listeners = document.querySelector("#listeners");
+    listeners.innerHTML =
+        "Spotify monthly listeners: " + json.data.artist.stats.monthlyListeners;
+}
+
+// FUNCTION TO SET ARTIST SPOTIFY WORLD RANK
+function setArtistWorldRank(json) {
+    let worldRank = document.querySelector("#world-rank");
+    worldRank.innerHTML =
+        "Spotify world rank: " + json.data.artist.stats.worldRank;
 }
 
 // FUNCTION TO ADD COPYRIGHT AT BOTTOM OF PAGE
