@@ -1,56 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta name="keywords" content="music artist search, music artist, music, search" />
-    <meta name="description" content="A music artist search site" />
-    <meta name="author" content="Norman Breuer" />
-    <title>Musicaly</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <section id="section1">
-        <div id="header-container">
-            <h1>Musicaly</h1>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="keywords"
+            content="music artist search, music artist, music, search"
+        />
+        <meta name="description" content="A music artist search site" />
+        <meta name="author" content="Norman Breuer" />
+        <title>Musicaly</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <section id="section1">
+            <div id="header-container">
+                <h1>Musicaly</h1>
+            </div>
+            <div id="blob-container">
+                <div class="blob"></div>
+                <div class="blob blue-blob"></div>
+                <div class="blob"></div>
+                <div class="blob blue-blob"></div>
+            </div>
+            <div id="p-container">
+                <p id="p">
+                    Hi! Welcome to Musicaly. Search any artist and get info on
+                    that artist
+                </p>
+            </div>
+            <input type="text" onfocus="this.value=''" id="search-box" />
+            <div id="btn-container">
+                <button id="btn">Let's Go!</button>
+            </div>
+        </section>
+        <div>
+            <p id="artist-name"></p>
         </div>
-        <div id="blob-container">
-            <div class="blob"></div>
-            <div class="blob blue-blob"></div>
-            <div class="blob"></div>
-            <div class="blob blue-blob"></div>
-        </div>
-        <div id="p-container">
-            <p id="p">Hi! Welcome to Musicaly. Search any artist and get info on that artist</p>
-        </div>
-        <input type="text" id="search-box">
-        <div id="btn-container">
-            <button id="btn">Let's Go!</button>
-        </div>
-    </section>
-    <div>
-        <p id="artist-name"></p>
-    </div>
-    <div class="container">
         <div id="artist-img"></div>
-        <div id=artist-data-one>
+        <div id="info-container">
             <ul>
                 <li id="albums">Albums:</li>
                 <li>Release date:</li>
-                <li>Runtime:</li>                
+                <li>Runtime:</li>
             </ul>
         </div>
-        <div id="artist-data-two">
-            <p id="playlists"></p>
+        <div id="bio-container">
+            <p id="bio">bio</p>
         </div>
-    </div>
-    <div id="copyright-container">
-        <div id="copyright"></div>
-    </div>
-    <script src="scripts.js"></script>    
-</body>
+        <footer></footer>
+        <script src="scripts.js"></script>
+    </body>
 </html>

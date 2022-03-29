@@ -6,60 +6,55 @@
 
 :root {
     --pink: #ff1493;
-    --blue: #2540A2;
+    --blue: #2540a2;
+    --green: #1db954;
 }
-
 
 html {
     margin: 0;
     padding: 0;
-    height: 100%; 
+    height: 100%;
     box-sizing: border-box;
 }
 
 body {
-    /* background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(37,64,162,1) 30%, rgba(255,20,147,1) 100%); */
     background-color: black;
-    height: 100%; 
+    height: 100%;
     min-height: 100%;
     min-width: 320px;
     margin: 0;
-    font-family: 'Play', sans-serif;
+    font-family: "Play", sans-serif;
     line-height: 1.5;
     font-size: calc(0.75em + 1vmin);
     word-wrap: break-word;
 }
 
 /* HEADER */
-
 #header-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
     text-align: center;
-    /* background: rgb(37, 64, 162, 0.8); */
-    background: none;
-    border-color:  var(--pink);
+    background: rgba(0, 0, 0, 0.7);
+    border-color: var(--pink);
     border-style: solid;
     border-width: 0.5rem;
     min-width: 320px;
-    max-width:fit-content;
+    max-width: fit-content;
     margin: 1.5rem auto;
-    border-radius: 50px;
+    border-radius: 5rem;
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     color: white;
     text-align: center;
     margin: 0;
-    padding: 0;
+    padding: 0 2rem;
 }
 
 /* PARAGRAPH */
-
 #p-container {
     display: flex;
     justify-content: center;
@@ -79,16 +74,17 @@ h1 {
 #search-box {
     display: block;
     margin: 0 auto;
-    font-family: 'Play', sans-serif;
+    font-family: "Play", sans-serif;
     font-size: 1.2rem;
 }
 
-input:focus, textarea:focus, select:focus{
+input:focus,
+textarea:focus,
+select:focus {
     outline: none;
 }
 
 /* BUTTON */
-
 #btn-container {
     text-align: center;
     margin: 3rem;
@@ -100,7 +96,7 @@ input:focus, textarea:focus, select:focus{
     padding: 1.5rem;
     border-style: none;
     background-color: var(--pink);
-    font-family: 'Play', sans-serif;
+    font-family: "Play", sans-serif;
     color: white;
     transition: 0.5s;
 }
@@ -112,11 +108,10 @@ input:focus, textarea:focus, select:focus{
 }
 
 /* MAIN CONTENT */
-
 #artist-name {
     display: block;
     margin: 0 auto;
-    font-size: 2rem;
+    font-size: 3rem;
     text-align: center;
     color: white;
 }
@@ -133,32 +128,47 @@ input:focus, textarea:focus, select:focus{
 }
 
 #artist-img {
-    height: 300px;
-    width: 300px;
-    flex-grow: 1;
+    margin: 0 auto;
+    background-size: contain;
+    height: 400px;
+    width: 400px;
+    border: 5px solid var(--pink);
 }
 
-#artist-data-one {
-    /* margin: 0 2rem; */
-    flex-grow: 1;
+#info-container {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
 }
 
-#artist-data-two {
-    /* margin: 0 2rem; */
-    flex-grow: 1;
+#bio-container {
+    background-color: rgb(0, 0, 0, 0.8);
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 5rem;
 }
 
-ul, li {
+#bio {
+    color: white;
+    font-size: 1rem;
+}
+
+ul,
+li {
+    list-style: none;
     color: white;
 }
 
-#copyright-container {
+footer {
     position: relative;
+    margin-top: 50px;
     bottom: 0;
     left: 0;
     right: 0;
     height: auto;
-    margin-top:200px;
+    min-width: 320px;
     width: 100%;
     background: rgb(255, 20, 147, 0.7);
 }
@@ -170,7 +180,6 @@ ul, li {
 }
 
 /* BLOBS */
-
 #blob-container {
     display: flex;
     flex-direction: row;
@@ -182,14 +191,13 @@ ul, li {
 
 .blob {
     display: flex;
-	background: var(--pink);
-	border-radius: 50%;
-	margin: 2rem;
-	height: 1.5rem;
-	width: 1.5rem;
-	/* box-shadow: 0 0 0 0 rgba(0, 0, 0, 1); */
-	transform: scale(1);
-	animation: pulse 2s infinite;
+    background: var(--pink);
+    border-radius: 50%;
+    margin: 2rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    transform: scale(1);
+    animation: pulse 2s infinite;
 }
 
 .blue-blob {
@@ -197,20 +205,19 @@ ul, li {
 }
 
 /* KEYFRAMES */
-
 @keyframes pulse {
-	0% {
-		transform: scale(0.95);
-		box-shadow: 0 0 0 0 rgba(37, 64, 162, 0.7);
-	}
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(37, 64, 162, 0.7);
+    }
 
-	70% {
-		transform: scale(1);
-		box-shadow: 0 0 0 20px rgba(37, 64, 162, 0);
-	}
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 20px rgba(37, 64, 162, 0);
+    }
 
-	100% {
-		transform: scale(0.95);
-		box-shadow: 0 0 0 0 rgba(37, 64, 162, 0);
-	}
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(37, 64, 162, 0);
+    }
 }
