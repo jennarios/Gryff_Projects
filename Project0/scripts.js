@@ -76,6 +76,7 @@ function setArtistImage(json) {
     let img = document.querySelector("#artist-img");
     let url = json.data.artist.visuals.avatarImage.sources[0].url;
     img.style.backgroundImage = `url('${url}')`;
+    img.style.border = "5px solid var(--pink)";
 }
 
 // FUNCTION TO ADD COPYRIGHT AT BOTTOM OF PAGE

@@ -132,7 +132,6 @@ select:focus {
     background-size: contain;
     height: 400px;
     width: 400px;
-    border: 5px solid var(--pink);
 }
 
 #info-container {
