@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fahrenheit To Celsius</title>
+        <link rel="stylesheet" href="styles.css"/>
+        <style>
+            h3{
+                color:coral;
+            }
+        </style>
+    </head>
+    <body onload="getWeatherData()">
+
+        <div class="float_1">    
+            <ul>
+                <p>MENU</p>
+                <li><a href="FahrenheitToCelsius.html">  Fahrenheit To Celsius</a> </li>
+                <li><a href="CupsToTeaspoons.html">  Cups To Teaspoons</a> </li>
+                <li><a href="pokemon.html">  PokeMon Search</a> </li>
+                <li><a href="index.html">Index Menu</a> </li>
+            </ul>
+       </div>
+
+       <div class="float_3">  
+        Current Location  : <span id="loc"></span><br />
+        Celcius  : <span id="cel"></span></br>
+        Fahrenheit  : <span id="fah"></span>  
+       </div>
+
+        <div class="float_2">
+            <section>
+                <div>
+                    <h2>Fahrenheit to Celsius</h2>
+                    <h3>Formula to convert Fahrenheit to Celsius. C = (F − 32) × 5 9 C = ( F − 32) × 5 9.</h3>
+                    <h3> Formula to convert Celsius to Fahrenheit. F = C × 9 5 + 32 F = C × 9 5 + 32.</h3>
+                    <p>In other words, if you’d like to convert a Fahrenheit temperature to an approximate Celsius temperature:</p>
+                    <ol>
+                        <li>Start with the temperature in Fahrenheit (e.g., 100 degrees).</li>
+                        <li>Subtract 30 from this figure (e.g., 100 - 30 = 70).</li>
+                        <li>Divide your answer by 2 (e.g., 70 / 2 = 35).</li>
+                    </ol>
+                </div>
+                <table Border=3 bordercolor = "Green" bgcolor= "pink" cellpadding=3 cellspacing=2>
+                    <tr>
+                        <caption>For Example</caption>
+                        <th colspan=2><h2>FahrenheitToCelsius</h2></th>
+                    </tr>
+                    <tr>
+                        <th>Fahrenheit</th>
+                        <th>Celsius</th>
+                    </tr>                    
+                    <tr>
+                        <td>-40F</td>
+                        <td>-40C</td>
+                    </tr>
+                    <tr>
+                        <td>-30F</td>
+                        <td>-34C</td>
+                    </tr>
+                    <tr>
+                        <td>-20F</td>
+                        <td>-29C</td>
+                    </tr>
+                    <tr>
+                        <td>-10F</td>
+                        <td>-23C</td>
+                    </tr>
+                    
+                </table>
+            </section>
+        </div>
+    <script src="script.js"></script>
+    </body>
+</html>
