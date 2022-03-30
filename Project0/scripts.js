@@ -46,6 +46,7 @@ async function getOverview(parsedId) {
     setArtistLinks(response);
     setArtistMonthlyListeners(response);
     setArtistWorldRank(response);
+    console.log(response);
     return secondJson;
 }
 
