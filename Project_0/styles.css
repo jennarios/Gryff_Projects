@@ -8,8 +8,19 @@ html {
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+    
+    form {
+      display: flex;
+      justify-content: center;
   }
-  
+
 img {
     height: 200px;
     border: 2px solid var(--palette-light);
@@ -19,6 +30,26 @@ img {
 
 ul {
     list-style: none;
+margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color:coral;
 }
 
 
@@ -33,24 +64,141 @@ td {
 tr:hover {
    background-color: coral;
 }
-    
-/* Elements are are placed here for reference, flexbox 
+
+h1 {
+  display: flex;
+  justify-content: center;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #333;
+  font-size: 32px;
+  text-align: center;
+}
+
+h3 {
+  /* display: block; */
+  padding: unset;
+  font-size: larger;
+  text-align: center;
+ 
+}
+
+h4 {
+  /* display: block; */
+  padding: unset;
+  text-align: center;
+ 
+}
+
+p {
+  width: 300px;
+  text-align: center;
+}
+
+/* Elements are are placed here for reference, flexbox utilized
 */
+#heading {
+  background-color: cornflowerblue;
+  display: flex;
+  justify-content: space-evenly;
+}
+
 #about-me {
-    background-color: cornflowerblue;
     display: flex;
     justify-content: space-evenly;
-    padding: 0 5% 5%;
+    padding: 3% 3% 3% 3%;
+    margin-left: 20%;
+    margin-right: 20%;
   }
 
 #dog-section {
     display: flex;
     justify-content: space-evenly;
-    padding: 0 10% 10%;
+    padding: 0 5% 5%;
   }
+ 
+#api-space {
+  display: flex;
+  justify-content: center; 
+  padding:0% 5% 5% 5%;
+  margin-left: 20%;
+  margin-right: 20%;
 
+}
+
+#form {
+  display: flex;
+  justify-content: center; 
+  padding:3% 3% 3% 3%;
+  background-color: cornflowerblue;
+}
+#get-text {
+  height: 100px;
+  width: 300px;
+  color: blue;
+}
+
+#img {
+  
+}
+#demo {
+  display: inline-block;
+    text-align: center;
+    transition: 0.5s;
+}
+
+button {
+  height: 200px;
+  width: 300px;
+  color: blue;
+}
+
+  /* This section is to place images and other spaces seperatly
+*/
 .pups {
-    display: inline-block;
+    display: center;
     text-align: center;
     transition: 0.5s;
   }
+
+    /* Contact form
+*/
+/* set the position of dropdown */  
+.dropdown {  
+  position: relative;  
+  display: inline-block;  
+}  
+/* set the size and position of button on web */  
+.button {  
+  height: 200px;
+  width: 300px;
+  color: #333;
+  padding: 10px 20px;  
+  font-size: 15px;  
+}  
+/* provide css to background of list items */   
+#list-items {  
+ display: none;  
+ position: absolute;  
+ background-color: white;  
+ min-width: 185px;  
+}  
+/* provide css to list items */   
+#list-items a {  
+  display: block;  
+  font-size: 18px;  
+  background-color: #ddd;  
+  color: black;  
+  text-decoration: none;  
+  padding: 10px;  
+}  
+
+#myList {
+  display: flex;
+  justify-content: center; 
+  text-align: center;
+  transition: 0.5s;
+  margin: 3%
+}
+
+
