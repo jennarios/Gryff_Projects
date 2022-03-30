@@ -130,7 +130,8 @@ select:focus {
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;
-    background-size: contain;
+    background-size: cover;
+    background-position: center;
     min-height: 320px;
     min-width: 320px;
     height: 400px;
