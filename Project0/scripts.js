@@ -62,14 +62,6 @@ function setArtistName(json) {
     name.innerHTML = json.data.artist.profile.name;
 }
 
-// FUNCTION TO SET ARTIST BIO
-function setArtistBio(json) {
-    let bio = document.querySelector(".bio");
-    let bioTitle = document.querySelector("#bio-title");
-    bio.innerHTML = json.data.artist.profile.biography.text;
-    bioTitle.innerHTML = "Bio:";
-}
-
 // FUNCTION TO SET ARTIST IMAGE
 function setArtistImage(json) {
     let img = document.querySelector("#artist-img");
@@ -120,6 +112,14 @@ function setArtistWorldRank(json) {
     let worldRank = document.querySelector("#world-rank");
     worldRank.innerHTML =
         "Spotify world rank: " + json.data.artist.stats.worldRank;
+}
+
+// FUNCTION TO SET ARTIST BIO
+function setArtistBio(json) {
+    let bio = document.querySelector(".bio");
+    let bioTitle = document.querySelector("#bio-title");
+    bio.innerHTML = json.data.artist.profile.biography.text;
+    bioTitle.innerHTML = "Bio:";
 }
 
 // FUNCTION TO ADD COPYRIGHT AT BOTTOM OF PAGE
