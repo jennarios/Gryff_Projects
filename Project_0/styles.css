@@ -97,8 +97,7 @@ p {
 
 /* Elements are are placed here for reference, flexbox utilized
 */
-#heading {
-  background-color: cornflowerblue;
+#heading { 
   display: flex;
   justify-content: space-evenly;
 }
@@ -130,7 +129,7 @@ p {
   display: flex;
   justify-content: center; 
   padding:3% 3% 3% 3%;
-  background-color: cornflowerblue;
+  background-color: rgba(104, 58, 16, 0.315);
 }
 #get-text {
   height: 100px;
@@ -138,9 +137,13 @@ p {
   color: blue;
 }
 
-#img {
-  
+  #logo {
+    display: flex;
+    justify-content: center; 
+    width: 500px;
+    height: 200px;
 }
+
 #demo {
   display: inline-block;
     text-align: center;
@@ -160,6 +163,7 @@ button {
     text-align: center;
     transition: 0.5s;
   }
+
 
     /* Contact form
 */

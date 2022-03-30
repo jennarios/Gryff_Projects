@@ -1,28 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dog and Stuff</title>
     <link rel="stylesheet" href="styles.css"/>
+    
 </head>
 
-  <body>
+<body background="C:\Users\riosj\Projects\Gryff_Projects\images\dogbone.jpg">
+    
 
-    <section id="about-me">
+    <ul>
+      <li><a href="default.asp">Home</a></li>
+      <li><a href="news.asp">About</a></li>
+      <li><a href="contact.asp">Contact</a></li>
+    </ul>
 
-          <h1>These are my Dogs</h1>
+    
+        <section id="heading">
+          <div id="logo">
+            <a href="image">
+                <img src="C:\Users\riosj\Projects\Gryff_Projects\images\daycare_1.png" alt="micasa" />
+            </a>
+        </div>
+        </section>
+       
+      <!--About the company section-->  
+
+          <section id="about-me">
+          <h4>Welcome to Mi Casa Doggy Daycare! We specialize in all breeds,
+            
+            but, but best of all, we do this from our home! No more concrete  
+            
+            floors, no more fake grass! 
+            <br>
+            <br>
+            Our dogs enjoy the luxury of home life, couches to lounge on, 
+            real grass to play on, we even have overnight options! 
+            <br>
+            Intersted? Fill out our contact form:</h4>
 
     </section> 
 
+    <!--Contact Form starts here-->
+    <section id="form">
+      <body>  
+        <form>  
+        <h3> WHAT SERVICE ARE YOU INTERESTED IN? </h3>  
+        <select id = "myList" onchange = "favTutorial()" >  
+        <option> ---Choose Service--- </option>  
+        <option> Half Day </option>  
+        <option> Full Day </option>  
+        <option> Overnight </option>  
+        <option> Monthly Package </option>  
+        </select>  
+        <p> You Selected:   
+        <input type = "text" id = "favourite" size = "20">  
+        </form>  
+    </section>
+    <!--Contact form end-->
+
+
+     <!--Dog section - images, sizes -->
+
+<h1>MEET THE IN-HOUSE TEAM</h1>
   <section id="dog-section">
+
+   
 
     <div class="pups">
       <h3>Brooklyn</h3>
-
-      <img src="C:\Users\riosj\Projects\Gryff_Projects\images\brooklook.jpg"
-          alt="Bluetick dog picture" height="200px"/>
+        <img src="C:\Users\riosj\Projects\Gryff_Projects\images\brooklook.jpg"
+          alt="Bluetick dog picture" id="image-hover" height="200px"/>
           
           <table>
             <tr> 
@@ -91,8 +142,18 @@
           </table>
     
    </div>
-
   </section>
+<!-- end -->
+
+<!-- Start of my API Fetch from JSON -->
+ <h1>Checkout some of our other Mi Casa Friends! </h1>
+   
+<section id="api-space">
+    
+<button id="getText">Click here to see more pups!</button>
+  <img id="image">
+
+</section>
 
   </body>
   <script src="scrips.js"></script>
